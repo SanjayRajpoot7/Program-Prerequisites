@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class ArrayCopy2DTo1D {
+
+    public static void main(String[] args) {
+        // Create a Scanner object to take user input
+        Scanner scanner = new Scanner(System.in);
+        
+        // Take user input for number of rows and columns
+        System.out.print("Enter the number of rows: ");
+        int rows = scanner.nextInt();
+
+        System.out.print("Enter the number of columns: ");
+        int columns = scanner.nextInt();
+
+        // Create a 2D array (matrix) based on user input
+        int[][] matrix = new int[rows][columns];
+
+        // 2D array element taken by user
+        for(int i = 0; i < rows; i++){
+            for(int j = 0; j < columns; j++){
+               matrix[i][j] = scanner.nextInt();
+          }
+         }
+         
+          int[] oneDArray = new int[ rows * columns ];
+          
+           int index = 0;
+           
+           for(int i = 0; i < rows; i++){
+              for(int j = 0; j < columns; j++){
+                    oneDArray[index] = matrix[i][j];
+            index++;
+              }
+             }
+
+
+             System.out.println("\nThe original 2D Array (Matrix):");
+            for(int i = 0; i < rows; i++){
+               for(int j = 0; j < columns; j++){
+                    System.out.print(matrix[i][j]+"\t");
+
+               }
+            System.out.println();
+        }
+
+        // Display the 1D array
+        System.out.println("\nThe copied 1D Array:");
+        for (int i = 0; i < oneDArray.length; i++) {
+            System.out.print(oneDArray[i] + " ");
+        }
+
+        // Close the scanner
+        scanner.close();
+    }
+}
+           
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
