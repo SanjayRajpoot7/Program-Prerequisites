@@ -5,7 +5,7 @@ import java.util.Scanner;
 
         int handShake(int student){
         
-        int totalHandShake = (student *(student -1) / 2);
+        int totalHandShake = (student *(student - 1) / 2);
 
         return totalHandShake;
         
